@@ -33,4 +33,22 @@ public class LinkedStack {
     LinkedStackNode top() {
         return lastNode;
     }
+
+    public static void main(String[] args) {
+        LinkedStackNode node1 = new LinkedStackNode("a");
+        LinkedStackNode node2 = new LinkedStackNode("b");
+        LinkedStackNode node3 = new LinkedStackNode("c");
+        LinkedStackNode node4 = new LinkedStackNode("d");
+
+        LinkedStack stack = new LinkedStack();
+        stack.push(node1);
+        stack.push(node2);
+        stack.push(node3);
+        stack.push(node4);
+
+        System.out.println(stack.top().data);
+        System.out.println(stack.pop().data);
+        System.out.println(stack.top().data);
+
+    }
 }

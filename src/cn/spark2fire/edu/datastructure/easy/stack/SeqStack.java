@@ -8,23 +8,23 @@ public class SeqStack {
     //只有数组是默认可以用的
     private SeqStackNode[] array;
     private int size;
-    private int lastIdx;
+    private int top;
 
     public SeqStack() {
         this.size = 50;
         array = new SeqStackNode[size];
-        lastIdx = -1;
+        top = -1;
     }
 
     public SeqStack(int size) {
         this.size = size;
         array = new SeqStackNode[size];
-        lastIdx = -1;
+        top = -1;
     }
 
     boolean push(SeqStackNode node) {
-        if (size - 1 > lastIdx) {
-            array[++lastIdx] = node;
+        if (size - 1 > top) {
+            array[++top] = node;
 
             return true;
         } else {
@@ -33,15 +33,15 @@ public class SeqStack {
     }
 
     SeqStackNode pop() {
-        if (lastIdx >= 0) {
-            return array[lastIdx--];
+        if (top >= 0) {
+            return array[top--];
         }
         return null;
     }
 
     SeqStackNode top() {
-        if (lastIdx >= 0) {
-            return array[lastIdx];
+        if (top >= 0) {
+            return array[top];
         }
         return null;
     }

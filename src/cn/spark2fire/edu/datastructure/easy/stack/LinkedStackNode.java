@@ -7,4 +7,8 @@ package cn.spark2fire.edu.datastructure.easy.stack;
 public class LinkedStackNode {
     public String data;
     public LinkedStackNode prev;
+
+    public LinkedStackNode(String data) {
+        this.data = data;
+    }
 }
