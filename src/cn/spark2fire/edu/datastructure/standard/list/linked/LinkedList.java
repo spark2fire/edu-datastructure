@@ -67,6 +67,11 @@ public class LinkedList {
         size--;
     }
 
+    public void update(Integer currentValue, Integer newValue) throws Exception {
+        LinkedNode node = findByValue(currentValue);
+        node.data = newValue;
+    }
+
     private void addFromTail(LinkedNode node) {
         if (tail.next != null) {
             tail.next.next = node;
