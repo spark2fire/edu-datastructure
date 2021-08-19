@@ -9,12 +9,12 @@ package cn.spark2fire.edu.datastructure.standard.list.vector;
 // 不要去继承之前那个VectorADT
 public class Vector {
     private DataNode[] vector;
-    private int size;
+    private int capacity;
     private int tail;
 
-    public Vector(int size) {
-        vector = new DataNode[size];
-        this.size = size;
+    public Vector(int capacity) {
+        vector = new DataNode[capacity];
+        this.capacity = capacity;
         tail = 0;
     }
 
@@ -34,19 +34,28 @@ public class Vector {
         return addToTail(data);
     }
 
-    public DataNode deleteByIndex(int index) {
-        if (index < tail) {
-            DataNode removal = vector[index];
-            for (int i = index; i < tail; i++) {
-                vector[i] = vector[i + 1];
-            }
-            return removal;
+    public void update(int idx, Integer data) throws Exception {
+        if (idx >= tail) {
+            throw new Exception("Out of bound.");
         }
-        return null;
+        vector[idx].data = data;
+    }
+
+    public DataNode deleteByIndex(int index) throws Exception {
+        if (index >= tail) {
+            throw new Exception("Out of bound.");
+        }
+        DataNode removal = vector[index];
+        for (int i = index; i < tail; i++) {
+            vector[i] = vector[i + 1];
+        }
+        tail--;
+        vector[tail] = null;
+        return removal;
     }
 
     private DataNode addFromHead(Integer data) {
-        if (tail >= size) {
+        if (tail >= capacity) {
             extend();
         }
         for (int i = tail; i > 0; i--) {
@@ -58,7 +67,7 @@ public class Vector {
     }
 
     private DataNode addToTail(Integer data) {
-        if (tail >= size) {
+        if (tail >= capacity) {
             extend();
         }
         DataNode newNode = new DataNode(data);
@@ -71,7 +80,7 @@ public class Vector {
         DataNode removal = null;
         int i = 0;
         for (i = 0; i < tail; i++) {
-            if (vector[i].data == value) {
+            if (vector[i].data.equals(value)) {
                 removal = vector[i];
                 break;
             }
@@ -85,12 +94,10 @@ public class Vector {
     }
 
     private void extend() {
-        int newSize = size + size / 2;
+        int newSize = capacity + capacity / 2;
         DataNode[] temp = new DataNode[newSize];
-        for (int i = 0; i < size; i++) {
-            temp[i] = vector[i];
-        }
+        if (capacity >= 0) System.arraycopy(vector, 0, temp, 0, capacity);
         vector = temp;
-        this.size = newSize;
+        this.capacity = newSize;
     }
 }

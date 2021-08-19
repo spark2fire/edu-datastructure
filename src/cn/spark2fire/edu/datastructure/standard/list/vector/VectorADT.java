@@ -13,6 +13,8 @@ public interface VectorADT {
 
     void deleteByValue(Integer value);
 
+    void update(int idx, Integer data);
+
     int size();
 
     boolean isEmpty();
