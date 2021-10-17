@@ -5,7 +5,12 @@ package cn.spark2fire.edu.datastructure.standard.list.vector;
  * Date: 2021/8/20.
  * QQ Group: 493306318
  */
-public class LinkedStack {
+/**
+ * Author: Leon@spark2fire.cn
+ * QQ Group: 493306318
+ * Date: 2021/10/17
+ */
+ public class LinkedStack {
     // 推荐用哨兵, 哨兵就是始终用一个没有数据的Node来做桩子
     LinkedStackNode head = new LinkedStackNode(null);
 

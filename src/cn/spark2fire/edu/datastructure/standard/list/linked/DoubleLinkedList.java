@@ -5,7 +5,12 @@ package cn.spark2fire.edu.datastructure.standard.list.linked;
  * Date: 2021/8/19.
  * QQ Group: 493306318
  */
-public class DoubleLinkedList {
+/**
+ * Author: Leon@spark2fire.cn
+ * QQ Group: 493306318
+ * Date: 2021/10/17
+ */
+ public class DoubleLinkedList {
 
     // java没有指针概念, 所以如果head本身不存放内容，就是头结点, 现在多用头结点，方便
     public DoubleLinkedNode head;

@@ -7,7 +7,12 @@ package cn.spark2fire.edu.datastructure.standard.list.vector;
  */
 
 // 不要去继承之前那个VectorADT
-public class Vector {
+/**
+ * Author: Leon@spark2fire.cn
+ * QQ Group: 493306318
+ * Date: 2021/10/17
+ */
+ public class Vector {
     private DataNode[] vector;
     private int capacity;
     private int tail;

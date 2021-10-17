@@ -7,7 +7,12 @@ import java.util.Objects;
  * Date: 2021/8/19.
  * QQ Group: 493306318
  */
-public class LinkedList {
+/**
+ * Author: Leon@spark2fire.cn
+ * QQ Group: 493306318
+ * Date: 2021/10/17
+ */
+ public class LinkedList {
     // java没有指针概念, 所以如果head本身不存放内容，就是头结点
     private LinkedNode head = new LinkedNode(null);
     // 如果要使用尾插法, 就用tail

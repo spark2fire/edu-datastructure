@@ -10,7 +10,12 @@ import java.util.Set;
  * Date: 2021/8/19.
  * QQ Group: 493306318
  */
-public class DataUtil {
+/**
+ * Author: Leon@spark2fire.cn
+ * QQ Group: 493306318
+ * Date: 2021/10/17
+ */
+ public class DataUtil {
     public static Integer genNumber(int range) {
         Random random = new Random();
         return random.nextInt(range);

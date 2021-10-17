@@ -7,7 +7,12 @@ import java.util.Arrays;
  * Date: 2021/8/20.
  * QQ Group: 493306318
  */
-public class SqStack {
+/**
+ * Author: Leon@spark2fire.cn
+ * QQ Group: 493306318
+ * Date: 2021/10/17
+ */
+ public class SqStack {
     int capacity = 50;
     int top = -1;
 

@@ -4,7 +4,12 @@ package cn.spark2fire.edu.datastructure.easy.stack;
  * @author Leon@spark2fire.cn
  * @date 2021/5/6
  */
-public class SeqStack {
+/**
+ * Author: Leon@spark2fire.cn
+ * QQ Group: 493306318
+ * Date: 2021/10/17
+ */
+ public class SeqStack {
     //只有数组是默认可以用的
     private SeqStackNode[] array;
     private int size;

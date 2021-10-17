@@ -1,6 +1,11 @@
 package cn.spark2fire.edu.datastructure.easy.tree.normal;
 
-public class ListTreeNode {
+/**
+ * Author: Leon@spark2fire.cn
+ * QQ Group: 493306318
+ * Date: 2021/10/17
+ */
+ public class ListTreeNode {
     private int id;
     private int value;
     private int leftChild;
